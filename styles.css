@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffeef8 0%, #ffe0f0 100%);
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.bear-img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #d63384;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    font-family: inherit;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.yes-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    min-width: 100px;
+}
+
+.yes-btn:hover {
+    background-color: #218838;
+}
+
+.no-btn {
+    font-size: 16px;
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    min-width: 100px;
+}
+
+.no-btn:hover {
+    background-color: #c82333;
+}
+
+.success-message {
+    font-size: 48px;
+    color: #ff69b4;
+    font-weight: bold;
+    margin-top: 20px;
+    animation: celebrate 0.5s ease-in-out;
+}
+
+@keyframes celebrate {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .success-message {
+        font-size: 36px;
+    }
+
+    .bear-img {
+        max-width: 250px;
+    }
+}
